@@ -1,0 +1,29 @@
+{
+  "redpanda": {
+    "broker": "d8dfctlqfk2v0e5r4290.any.us-east-1.mpx.prd.cloud.redpanda.com:9092",
+    "topic": "raw_events",
+    "username": "nalluriravi",
+    "password": "Tesco@123",
+    "sasl_mechanism": "SCRAM-SHA-256",
+    "security_protocol": "SASL_SSL",
+    "ssl_endpoint_identification": "https",
+    "jaas_login_module": "kafkashaded.org.apache.kafka.common.security.scram.ScramLoginModule"
+  },
+  "stream": {
+    "starting_offsets": "earliest",
+    "fail_on_data_loss": "false",
+    "trigger_interval": "10 seconds",
+    "output_mode": "append"
+  },
+  "delta": {
+    "table_name": "raw_events_delta1",
+    "checkpoint_location": "/Volumes/workspace/default/kafka/redpanda_source1"
+  },
+  "schema": {
+    "fields": [
+      {"name": "customer_id",   "type": "integer"},
+      {"name": "customer_name", "type": "string"},
+      {"name": "city",          "type": "string"}
+    ]
+  }
+}

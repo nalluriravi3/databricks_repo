@@ -1,0 +1,15 @@
+{
+  "customer": {
+    "source_table": "workspace.bronze.customer_bronze",
+    "target_table": "workspace.silver.customer_silver",
+    "business_key": ["customer_id"],
+    "scd_type": "2",
+    "surrogate_key": "customer_sk",
+    "watermark_column": "updated_date",
+    "mandatory_columns": [
+      "customer_id",
+      "customer_name"
+    ],
+    "quarantine_table": "workspace.quarantine.customer_quarantine"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "customer": {
+    "source_path": "/Volumes/workspace/default/autoloader_source/source/customer_incremental.csv",
+    "source_format": "csv",
+    "delimiter": ",",
+    "header": "true",
+    "target_catalog": "workspace",
+    "target_schema": "bronze_new",
+    "target_table": "bronze_customer",
+    "schema_evolution": true,
+    "load_type": "incremental",
+    "rename_mapping": {
+          "mobile": "contact",
+          "email_id":"email",
+          "cust_name":"customer_name",
+          "zip_code" : "postal_code"
+    }
+  }
+}
