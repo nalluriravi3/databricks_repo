@@ -1,0 +1,26 @@
+bundle:
+  name: "dab-dev"
+
+include:
+  - resources/*.yml
+  - resources/*/*.yml
+  
+variables:
+  catalog:
+    description: Catalog name
+  schema:
+    description: Schema name
+  job_name:
+    description: Job name
+
+targets:
+  dev:
+    mode: development
+
+    workspace:
+      host: https://dbc-dac97d47-9b88.cloud.databricks.com
+      
+    variables:
+      catalog: qa
+      schema: testschemaqa
+      job_name: ymltestjob-prod
