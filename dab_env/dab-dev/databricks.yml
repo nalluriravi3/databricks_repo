@@ -19,6 +19,7 @@ targets:
 
     workspace:
       host: https://dbc-dac97d47-9b88.cloud.databricks.com
+      # root_path: /Workspace/Users/nalluriravi3@gmail.com/.bundle/dab-dev/prod
       
     variables:
       catalog: qa
