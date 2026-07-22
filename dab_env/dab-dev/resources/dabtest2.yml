@@ -1,7 +1,7 @@
 resources:
   jobs:
     New_Job_2026_07_19_18_41_15:
-      name: dabjob2
+      name: dabjob2_dev
       email_notifications:
         on_success:
           - nalluri.sch@gmail.com
